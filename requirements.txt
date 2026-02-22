@@ -1,0 +1,9 @@
+requests
+pandas
+numpy
+fastapi
+uvicorn
+schedule
+ta
+finance-datareader
+python-dotenv

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOSPI 200 알고리즘 투자 연구 백서</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: rgba(22, 27, 34, 0.7);
+            --accent-blue: #00d2ff;
+            --accent-green: #39ff14;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            color: var(--accent-blue);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th {
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--accent-blue);
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .formula {
+            font-family: 'JetBrains Mono', monospace;
+            background: #000;
+            padding: 20px;
+            border-radius: 12px;
+            color: var(--accent-green);
+            overflow-x: auto;
+            border-left: 4px solid var(--accent-green);
+            font-size: 1.1rem;
+        }
+
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 60px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            background: var(--accent-blue);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="file:///Users/kangwoo/.gemini/antigravity/brain/d3331f5e-0fe2-4f14-94ff-c7395b55d8e0/kospi_strategy_cover_1771726529166.png"
+            alt="Strategy Cover" class="hero-image">
+
+        <h1>KOSPI 200 알고리즘 투자 연구 백서</h1>
+        <div class="subtitle">수학적 동역학을 이용한 지수 스위칭 전략의 극대화</div>
+
+        <div class="card">
+            <h2>🔬 프로젝트 개요</h2>
+            <p>본 보고서는 코스피 200 지수 레버리지 및 인버스 ETF를 활용하여 <strong>연평균 수익률(CAGR) 67.22%</strong>를 달성하기까지의 모든 연구 과정과 전략 로직을
+                집대성했습니다.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">67.22%</span>
+                    <span class="stat-label">Max CAGR</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">98.0x</span>
+                    <span class="stat-label">10-Year Return</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">1.72</span>
+                    <span class="stat-label">Sharpe Ratio</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">-38.5%</span>
+                    <span class="stat-label">Max Drawdown</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 전략 진화 로드맵</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>단계</th>
+                        <th>전략 명칭</th>
+                        <th>핵심 지표</th>
+                        <th>CAGR</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phase 1</td>
+                        <td>Standard VBO</td>
+                        <td>Volatility Breakout</td>
+                        <td>35.1%</td>
+                        <td>기초 모델</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2</td>
+                        <td>Linear NATR</td>
+                        <td>Linear MA Length</td>
+                        <td>51.5%</td>
+                        <td>동적 이평선 도입</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 3</td>
+                        <td>Quadratic NATR</td>
+                        <td>Quadratic VWMA</td>
+                        <td>65.3%</td>
+                        <td>비선형 최적화</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 4</td>
+                        <td><strong>ADX Peak</strong></td>
+                        <td><strong>ADX Quadratic</strong></td>
+                        <td><strong>67.22%</strong></td>
+                        <td><strong>최종 챔피언</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🧠 핵심 엔진: ADX-Quadratic VWMA</h2>
+            <p>시장의 추세 강도(ADX)를 측정하여 이동평균선의 길이를 실시간(T-0)으로 계산합니다.</p>
+            <div class="formula">
+                MA_Length = 0.6 * ADX^2 - 35 * ADX + 170
+            </div>
+            <ul>
+                <li><strong>추세 장 (ADX↑)</strong>: 이평선 단축(20~50일) → 반응성 극대화</li>
+                <li><strong>횡보 장 (ADX↓)</strong>: 이평선 연장(150~250일) → 노이즈 제거</li>
+            </ul>
+        </div>
+
+        <div class="card" style="background: white; color: #000;">
+            <h2 style="color: #000; border-color: #000;">🔄 전략 실행 프로세스</h2>
+            <div class="mermaid">
+                graph LR
+                A[오후 3:20 데이터] --> B{NATR > 5.0?}
+                B -- YES --> C[현금화 탈출]
+                B -- NO --> D[ADX 이평선 계산]
+                D --> E{가격 > VWMA?}
+                E -- YES --> F{RSI 과열?}
+                F -- YES --> G[익절 현금화]
+                F -- NO --> H[롱: 레버리지]
+                E -- NO --> I[숏: 곱버스]
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📡 운용 가이드</h2>
+            <ul>
+                <li><strong>주력 종목</strong>: KODEX 레버리지 / KODEX 200선물인버스2X</li>
+                <li><strong>매매 시간</strong>: 매일 오후 <strong>3시 21분</strong> (종가 시장가 매수/매도)</li>
+                <li><strong>위험 관리</strong>: NATR이 5.0을 넘으면 묻지도 따지지도 말고 현금 보유.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            © 2026 ANTS INVEST RESEARCH. All Rights Reserved.<br>
+            "수학은 감정보다 항상 옳다."
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    </script>
+
+</body>
+
+</html>

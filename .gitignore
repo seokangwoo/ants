@@ -1,0 +1,17 @@
+.env
+token.dat
+__pycache__/
+*.pyc
+.DS_Store
+data/
+venv/
+.venv/
+dashboard/backend/venv/
+dashboard/frontend/node_modules/
+.gemini/
+.idea/
+.vscode/
+*.log
+*.html
+!dashboard/frontend/index.html
+!reports/*.html
